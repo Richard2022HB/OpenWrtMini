@@ -1,4 +1,4 @@
-name: ARMv8 Mini OpenWrt
+name: ARMv8 Self OpenWrt
 
 on:
   workflow_dispatch:
@@ -8,15 +8,15 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: configs/armv8-mini.config
-  DIY_SCRIPT: diy-mini.sh
+  CONFIG_FILE: configs/armv8-self.config
+  DIY_SCRIPT: diy-self.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: ROOTFS_MINI
+  FIRMWARE_TAG: ROOTFS_Self
   OPENWRT_RELEASE: true
-  OPENWRT_TAG: ARMv8_MINI
+  OPENWRT_TAG: ARMv8_Self
   TZ: Asia/Shanghai
 
 jobs:
