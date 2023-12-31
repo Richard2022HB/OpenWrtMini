@@ -14,9 +14,9 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: ROOTFS_Self
+  FIRMWARE_TAG: ROOTFS_SELF
   OPENWRT_RELEASE: true
-  OPENWRT_TAG: ARMv8_Self
+  OPENWRT_TAG: ARMv8_SELF
   TZ: Asia/Shanghai
 
 jobs:
@@ -185,7 +185,7 @@ jobs:
         body: |
           **This is Temporary Firmware for Armvirt 64**
           ### 📒 固件信息
-          - 🚀 成品固件点击此处跳转➦[SELF](https://github.com/richard2022hb/OpenWrt/releases/tag/ARMv8_SELF)即可下载
+          - 🚀 成品固件点击此处跳转➦[MINI](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_MINI)即可下载
           - 💻 平台架构: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }} (精简版临时固件)
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
@@ -242,7 +242,7 @@ jobs:
       uses: ophub/flippy-openwrt-actions@main
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*rootfs.tar.gz
-        PACKAGE_SOC: 全部
+        PACKAGE_SOC: all
         WHOAMI: Richard
         KERNEL_VERSION_NAME: 5.15.13_6.1.5
         KERNEL_AUTO_LATEST: true
